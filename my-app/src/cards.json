@@ -2,11 +2,61 @@
   {
     "id": 1,
     "name": "BeeMo",
-    "image": "BeeMo.jpeg"
+    "image": "../assets/images/BeeMo.jpeg"
   },
   {
     "id": 2,
     "name": "Earl of Lemongrab",
-    "image": "assets/images/EarlofLemongrab.jpeg"
+    "image": "../assets/images/EarlofLemongrab.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Finn",
+    "image": "../assets/images/Finn.png"
+  },
+  {
+    "id": 4,
+    "name": "FP",
+    "image": "../assets/images/FP.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "IceKing",
+    "image": "../assets/images/IceKing.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Jake",
+    "image": "../assets/images/Jake.png"
+  },
+  {
+    "id": 7,
+    "name": "Earl of Lemongrab",
+    "image": "../assets/images/LadyRainicorn.jpeg"
+  },
+  {
+    "id": 8,
+    "name": "LSP",
+    "image": "../assets/images/LSP.jpeg"
+  },
+  {
+    "id": 9,
+    "name": "MarcelineVQ",
+    "image": "../assets/images/MarcelineVQ.jpeg"
+  },
+  {
+    "id": 10,
+    "name": "PB",
+    "image": "../assets/images/PB.png"
+  },
+  {
+    "id": 11,
+    "name": "Peppermint Butler",
+    "image": "../assets/images/PeppermintButler.jpeg"
+  },
+  {
+    "id": 12,
+    "name": "Treetrunks",
+    "image": "../assets/images/Treetrunks.jpeg"
   }
 ]
