@@ -1,7 +1,9 @@
 # clickygame
 a memory game
-12 images randomly ordered
-  
+an array of images #'d from (0-12) 
+randomly placed in a grid or overflow row
+  * var x = Math.floor((Math.random() * 12) + 1);
+
   user clicks an image to increase score
     each clicks shuffles the images around
   user cannot click the same image twice
