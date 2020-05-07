@@ -13,20 +13,22 @@ function shuffle(array) {
   }
 }
 
-shuffle(cards); console.log(cards);
+// shuffle(cards); console.log(cards);
+// let clicked = [];
 
 class App extends Component {
   // initialiazing this.state.cards to cards.json array
   state = {
-    cards
+    cards: cards,
+    score: 0,
   };
-  
-  shuffle = (cards) => {
-    for (let i = cards.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      [cards[i], cards[j]] = [cards[j], cards[i]];
-    }
-  }
+
+
+  // editScore = () => {
+  //   clicked.push(cards.id);
+
+  //   this.setState({ score: this.state.score + 1 });
+  // }
   
   render() {
     shuffle(cards);
@@ -36,13 +38,17 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>Adventure Time Click Game</Title>
+        <div className="cardContainer">
+
         {this.state.cards.map(card => (
           <GameCard 
             id={card.id}
             key={card.id}
             image={card.image}
+            hit={this.hit}
             />
-            ))}
+          ))}
+        </div>
       </Wrapper>
     );
   }
