@@ -1,9 +1,0 @@
-.cardContainer {
-  width: 60%;
-  display: flex;
-  flex-flow: row wrap;
-  padding: 20px;
-  margin: 5% 15%;
-  justify-content: space-between;
-  align-content: center;
-}
