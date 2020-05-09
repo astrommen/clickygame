@@ -10,28 +10,44 @@ import './App.css';
 // let clicked = [];
 
 class App extends React.Component {
+  // setting the properties of base
   // initialiazing this.state.cards to cards.json array
   state = {
     cards: cards,
     score: 0,
-    hit: false
+    topScore: 0,
+    hit: false,
+    title: "Adventure Time Click Game",
+    isClicked: false
   };
 
   shuffle = (array) => {
+    // fisher-yates shuffle code from j
     for (let i = array.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
     }
   }
 
-  handleHit = _hit => {
-    this.setState({ hit: this.state.hit + 1 });
+  click = () => {
+    const cardArray = this.state.cards;
+    const clickedArr = cardArray.filter(card => card.id === id);
+    // if state of click is false
+    if(this.isClicked) {
+      // set state of click to true
+      this.isClicked = true;
+      // increase score value by one
+      this.setState({ score: this.state.score + 1 });
+      // shuffle cards
+      this.shuffle(this.state.cards);
+      console.log("${this.score}");
+    } else { // if state of click is true
+      this.setState({ title: "Ooooweee! You guessed wrong!" });
+      // reset all isClicked to false
+      // log topScore if score is higher than current topScore
+      // .then()=>reset score to zero
+    }
   };
-  // editScore = () => {
-    //   clicked.push(cards.id);
-    
-    //   this.setState({ score: this.state.score + 1 });
-    // }
     
     render() {
       this.shuffle(this.state.cards);
@@ -40,8 +56,17 @@ class App extends React.Component {
       // console.log(card);
       return (
         <Wrapper>
-        <Title>Adventure Time Click Game</Title>
-        <p className="card hit">Card Hit: {this.state.hit}</p>
+        <Title>{this.state.title}
+        <span className="card hit">Card Hit: {this.state.score}</span>
+        <ul>
+          <li>
+            {this.state.score}
+          </li>
+          <li>
+            {this.state.score}
+          </li>
+        </ul>
+        </Title>
         <div className="cardContainer">
 
         {this.state.cards.map(card => (
@@ -49,7 +74,7 @@ class App extends React.Component {
           id={card.id}
           key={card.id}
           image={card.image}
-          handleHit= {this.handleHit}
+          isClicked= {this.isClicked}
           // hit= {this.hit}
             />
             
