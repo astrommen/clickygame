@@ -29,7 +29,7 @@ class App extends React.Component {
     }
   }
 
-  click = () => {
+  click = id => {
     const cardArray = this.state.cards;
     const clickedArr = cardArray.filter(card => card.id === id);
     // if state of click is false
